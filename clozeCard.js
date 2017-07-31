@@ -11,7 +11,6 @@ var clozeCardThree = new ClozeCard('A Wampa attacks Luke at the beginning of The
 var clozeCardFour = new ClozeCard('Princess Leia said, "Aren\'t you a little short to be a Storm Trooper?".', 'Princess Leia');
 var clozeCardError = new ClozeCard('Throw', 'Error');
 
-
 questions.push(clozeCardOne);
 questions.push(clozeCardTwo);
 questions.push(clozeCardThree);
@@ -21,7 +20,7 @@ var selection = 0;
 function randomQuestion() {
 	selection = Math.floor(Math.random() * (questions.length));
 	if (questions[selection].fullText.indexOf(questions[selection].cloze) !== -1){
-		console.log('You have 10 Seconds to say the missing word or phrase:')
+		console.log('You have 10 Seconds to say the missing word or phrase aloud:')
 		setTimeout(function(){console.log(questions[selection].partial);}, 3000);
 		setTimeout(function(){console.log(questions[selection].cloze);}, 13000);
 	} else {
